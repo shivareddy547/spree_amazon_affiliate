@@ -1,0 +1,100 @@
+---
+default: &DEFAULT
+  :configure:
+    :associate_tag: 'lovcart547-21'
+    :AWS_access_key_id: 'AKIAJ5OQ43XBZFQBQ5VA'
+    :AWS_secret_key: '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'
+    :country: 'us'
+    :response_group: 'Large'
+    :Version: '2011-08-01'
+  :query:
+    :q: "%{q}"
+    :options:
+      :response_group: 'Large, Accessories'
+      :search_index: 'All'
+      :sort: "salesrank"
+  :root_taxons:
+    - :name: Apparel & Accessories
+      :id: 1036592
+      :search_index: Apparel
+    - :name: Automotive
+      :id:  15684181
+      :search_index: Automotive
+    - :name: Baby
+      :id:  165796011
+      :search_index: Baby
+    - :name: Beauty
+      :id:  3760911
+      :search_index: Beauty
+    - :name: Books
+      :id: 283155
+      :search_index: Books
+    - :name: Movies & TV
+      :id: 2625373011
+      :search_index: DVD
+    - :name: Electronics
+      :id: 172282
+      :search_index: Electronics
+    - :name: Gourmet and Grocery Food
+      :id: 16310101
+      :search_index: GourmetFood
+    - :name: Health & Personal Care
+      :id: 3760901
+      :search_index: HealthPersonalCare
+    - :name: Industrial & Scientific
+      :id: 16310161
+      :search_index: Industrial
+    - :name: Jewelry
+      :id:  3367581
+      :search_index: Jewelry
+    - :name: Kindle Store
+      :id: 133141011
+      :search_index: Books
+    - :name: Kitchen & Housewares
+      :id: 284507
+      :search_index: Kitchen
+    - :name: Magazine Subscriptions
+      :id: 599858
+      :search_index: Magazines
+    - :name: Music
+      :id:  5174
+      :search_index: Music
+    - :name: Musical Instruments
+      :id:  11091801
+      :search_index: MusicalInstruments
+    - :name: Office Products
+      :id:  1064954
+      :search_index: OfficeProducts
+    - :name: Camera & Photo
+      :id: 502394
+      :search_index: Photo
+    - :name: Shoes
+      :id:  672123011
+      :search_index: Shoes
+    - :name: Software
+      :id:  229534
+      :search_index: Software
+    - :name: Sports & Outdoors
+      :id: 3375251
+      :search_index: SportingGoods
+    - :name: Tools & Hardware
+      :id: 228013
+      :search_index: Tools
+    - :name: Toys and Games
+      :id: 165793011
+      :search_index: Toys
+    - :name: Computer & Video Games
+      :id:  468642
+      :search_index: VideoGames
+
+development:
+  <<: *DEFAULT
+
+test:
+  <<: *DEFAULT
+
+cucumber:
+  <<: *DEFAULT
+
+production:
+  <<: *DEFAULT

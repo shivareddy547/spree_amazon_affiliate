@@ -1,0 +1,28 @@
+<%= render :partial => 'spree/admin/shared/amazon_sub_menu' %>
+
+<h1><%= t("flipkart_products") %></h1>
+
+<table class="index">
+  <thead data-hook="admin_amazon_products_index_headers">
+  <th><%= t("image") %></th>
+  <th><%= t("amazon_id") %></th>
+  <th><%= t('price') %></th>
+  <th><%= t("name") %></th>
+  <th data-hook="admin_amazon_products_index_header_actions">&nbsp;</th>
+  </thead>
+  <tbody>
+  <% @flipkart_products.each do |product|%>
+    <tr data-hook="admin_amazon_products_index_rows">
+      <td><%= link_to image_tag(product.images.first.attachment.url), product.product_url, :alt => product.name, :target => '_blank' if product.images.first %></td>
+      <td><%= product.id %></td>
+      <td><%= product.price %></td>
+      <td><%= link_to product.name.html_safe, product.product_url, :target => '_blank' %></td>
+      <td><%= button_to t(:add_to_store), admin_flipkart_products_path(:asin => product.id,:cache_pams=>@cache), :method => 'POST' %></td>
+    </tr>
+  <% end %>
+  </tbody>
+</table>
+
+<%#= paginate @amazon_products %>
+
+<%= render :partial => 'spree/admin/shared/flipkart_product_search' %>

@@ -1,0 +1,7 @@
+<% content_for :sub_menu do %>
+  <ul id="sub_nav" data-hook="admin_amazon_sub_tabs">
+    <%= tab :amazon_taxons, :label => t(:taxons), :match_path => '/amazon_taxons' %>
+    <%= tab :amazon_products, :label => t(:products), :match_path => '/amazon_products' %>
+    <%= tab :amazon_imports, :label => t(:imports), :match_path => '/amazon_imports' %>
+  </ul>
+<% end %>

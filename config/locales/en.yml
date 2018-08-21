@@ -1,0 +1,25 @@
+---
+en:
+  activerecord:
+    attributes:
+      product:
+        amazon_id: Amazon ID
+  add_to_store: Add to store
+  amazon: Amazon
+  amazon_import_template: Amazon Import Template
+  amazon_imports: Amazon Imports
+  amazon_products: Amazon Products
+  amazon_taxons: Amazon Taxons
+  flipkart_products: Flipkart Products
+  flipkart_taxons: Flipkart Taxons
+  flipkart_price: Flpkart Price
+  buy_on_amazon: Buy on Amazon
+  child_taxons: Child Taxons
+  download_template: Download Template
+  import_instructions: Please download the template file and list the ASIN number of each product to import.  You may also include a taxon tree to assign the product.
+  imports: Imports
+  keywords: Keywords
+  upload: Upload
+  upload_complete: Upload Complete
+  upload_spreadsheet: Upload Spreadsheet
+  view_products: View Products

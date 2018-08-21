@@ -1,0 +1,14 @@
+<% content_for :sidebar do %>
+  <div class="box" data-hook="admin_amazon_products_index_search">
+    <h3><%= t(:search) %></h3>
+    <%= form_tag admin_amazon_products_path, :method => :get do |f| %>
+      <p>
+        <%= t(:keywords) %><br />
+        <%= text_field_tag :keywords %>
+      </p>
+      <div data-hook="admin_amazon_products_index_search_buttons">
+        <p><%= button t(:search) %></p>
+      </div>
+    <% end %>
+  </div>
+<% end %>

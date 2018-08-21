@@ -1,0 +1,12 @@
+<%= render :partial => 'spree/admin/shared/amazon_sub_menu' %>
+
+<h1><%= t("amazon_imports") %></h1>
+<p><%= t(:import_instructions) %></p>
+<p><%= link_to t(:download_template), new_admin_amazon_import_path %></p>
+<h2><%= t(:upload_spreadsheet) %></h2>
+<p>
+  <%= form_tag admin_amazon_imports_path, :method => :post, :multipart => true do |f| %>
+    <p><%= file_field_tag :upload_file %></p>
+    <p><%= button t(:upload) %></p>
+  <% end %>
+</p>

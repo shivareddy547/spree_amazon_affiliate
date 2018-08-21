@@ -1,0 +1,25 @@
+<%= render :partial => 'spree/admin/shared/amazon_sub_menu' %>
+
+<h1><%= t("amazon_taxons") %></h1>
+
+<table class="index">
+  <thead data-hook="admin_amazon_index_headers">
+    <th><%= t("name") %></th>
+    <th data-hook="admin_amazon_index_header_actions">&nbsp;</th>
+  </thead>
+  <tbody>
+    <% @taxons.each do |taxon|%>
+      <tr data-hook="admin_amazon_index_rows">
+        <td><%= taxon[:name] %></td>
+        <td>
+          <%#= link_to t(:child_taxons), admin_flipkart_taxons_path(:taxon_id => taxon[:name]) %>
+<!--          |-->
+          <%= link_to t(:view_products), admin_flipkart_products_search_products_path(:taxon_id => taxon[:taxon_url].split("category").last
+          ) %>
+        </td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<%= render :partial => 'spree/admin/shared/flipkart_product_search' %>
